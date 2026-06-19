@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Library Management</h1>
+
+    <div class="card">
+
+        <div class="form-grid">
+            <input type="text" id="searchTitle" placeholder="Search Books">
+
+            <button class="search-btn" onclick="searchBook()">
+                Search
+            </button>
+
+            <button class="show-btn" onclick="loadBooks()">
+                Show All
+            </button>
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="form-grid">
+            <input id="title" placeholder="Book Title">
+            <input id="author" placeholder="Author">
+            <input id="category" placeholder="Category">
+            <input id="price" placeholder="Price">
+            <input id="quantity" placeholder="Quantity">
+
+            <button class="add-btn" onclick="addBook()">
+                Add Book
+            </button>
+        </div>
+
+    </div>
+
+    <div class="card">
+        <ul id="bookList"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

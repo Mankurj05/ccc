@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:#0b0f19;
+    color:#f8fafc;
+    min-height:100vh;
+    padding:40px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    font-size:3.2rem;
+    font-weight:700;
+    text-align:center;
+    margin-bottom:35px;
+    letter-spacing:-1px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1f2937;
+    border-radius:16px;
+    padding:22px;
+    margin-bottom:22px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:12px;
+}
+
+input{
+    height:52px;
+    background:#1a2234;
+    border:1px solid #2d3748;
+    color:white;
+    border-radius:12px;
+    padding:0 16px;
+    font-size:15px;
+    transition:.2s;
+}
+
+input:focus{
+    outline:none;
+    border-color:#d4a017;
+}
+
+input::placeholder{
+    color:#94a3b8;
+}
+
+button{
+    height:52px;
+    border:none;
+    border-radius:12px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.25s;
+}
+
+button:hover{
+    transform:translateY(-2px);
+}
+
+.add-btn{
+    background:#d4a017;
+    color:#111;
+}
+
+.search-btn{
+    background:#334155;
+    color:white;
+}
+
+.show-btn{
+    background:#475569;
+    color:white;
+}
+
+#bookList{
+    list-style:none;
+}
+
+#bookList li{
+    background:#151d2d;
+    border:1px solid #222c40;
+    border-left:4px solid #d4a017;
+    border-radius:14px;
+    padding:22px;
+    margin-bottom:15px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.book-info strong{
+    font-size:1.2rem;
+    display:block;
+    margin-bottom:6px;
+}
+
+.book-info{
+    color:#cbd5e1;
+    line-height:1.7;
+}
+
+.actions{
+    display:flex;
+    gap:10px;
+}
+
+.edit-btn{
+    background:transparent;
+    color:#22c55e;
+    border:1px solid #22c55e;
+    width:90px;
+}
+
+.delete-btn{
+    background:transparent;
+    color:#ef4444;
+    border:1px solid #ef4444;
+    width:90px;
+}
+
+.edit-btn:hover{
+    background:#22c55e;
+    color:white;
+}
+
+.delete-btn:hover{
+    background:#ef4444;
+    color:white;
+}
+
+.stats{
+    display:flex;
+    gap:25px;
+    margin-bottom:20px;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.stats span{
+    background:#111827;
+    padding:10px 15px;
+    border-radius:10px;
+    border:1px solid #1f2937;
+}
+
+@media(max-width:768px){
+
+    body{
+        padding:20px;
+    }
+
+    h1{
+        font-size:2.2rem;
+    }
+
+    #bookList li{
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .actions{
+        width:100%;
+    }
+
+    .edit-btn,
+    .delete-btn{
+        flex:1;
+    }
+}

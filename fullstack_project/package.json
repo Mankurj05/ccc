@@ -1,0 +1,18 @@
+{
+  "name": "placement-tracker-fullstack",
+  "private": true,
+  "version": "1.0.0",
+  "description": "React, Node.js, Express, and MongoDB placement application tracker.",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c green,cyan \"npm run dev --workspace server\" \"npm run dev --workspace client\"",
+    "server": "npm run dev --workspace server",
+    "client": "npm run dev --workspace client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
